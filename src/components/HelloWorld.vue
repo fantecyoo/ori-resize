@@ -1,24 +1,28 @@
 <template>
   <div class="hello">
-    <Resize />
+    <div class="container">
+      <div style="height:100px;width: 100px;">1</div>
+      <Resizer />
+      <div style="flex:1">2</div>
+    </div>
   </div>
 </template>
 
 <script>
-import Resize from './resize/resize.vue'
+import Resizer from './resize/resizer.vue'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
   components: {
-    Resize
+    Resizer
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 h3 {
   margin: 40px 0 0;
 }
@@ -32,5 +36,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.container{
+  display: flex;
+  width: 100%;
 }
 </style>
